@@ -8,7 +8,7 @@ const config = {
     basicInfo: {
         name: "W1ndys",
         bio: "网络安全爱好者 / Python爱好者",
-        avatar: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/github-api/github-api.png", // 使用GitHub API图标作为头像
+        avatar: "https://github.com/W1ndys.png",
         footerText: "© 2025-present W1ndys 我的个人主页 - 由 HTML/CSS/JS 驱动"
     },
 
@@ -35,7 +35,7 @@ const config = {
             icon: "fab fa-github"
         },
         {
-            name: "Email",
+            name: "Outlook邮箱",
             url: "mailto:w1ndys@outlook.com",
             icon: "fas fa-envelope"
         },
@@ -49,28 +49,32 @@ const config = {
             name: "个人博客",
             url: "https://blog.w1ndys.top",
             icon: "fas fa-blog"
+        },
+        {
+            name: "W1ndysBot",
+            url: "https://github.com/W1ndys/W1ndysBot",
+            icon: "fas fa-robot"
+        },
+        {
+            name: "Easy-QFNU",
+            url: "https://github.com/W1ndys/Easy-QFNU",
+            icon: "fas fa-book"
         }
     ],
 
     // 项目展示
     projects: [
         {
-            title: "个人作品集",
-            description: "展示我的设计和开发项目的作品集网站",
-            image: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png",
-            url: "#"
+            title: "Easy-QFNU",
+            description: "Easy-QFNU官方文档，致力于让你的QFNU生活更加便捷",
+            image: "https://socialify.git.ci/W1ndys/Easy-QFNU/image?description=1&font=KoHo&forks=1&issues=1&language=1&owner=1&pulls=1&stargazers=1&theme=Auto",
+            url: "https://github.com/W1ndys/Easy-QFNU"
         },
         {
-            title: "旅行博客",
-            description: "记录我的旅行经历和摄影作品的博客",
-            image: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png",
-            url: "#"
-        },
-        {
-            title: "天气应用",
-            description: "使用React开发的实时天气查询应用",
-            image: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png",
-            url: "#"
+            title: "W1ndysBot",
+            description: "一个基于Python和NapCatQQ的QQ机器人",
+            image: "https://w1ndysbot.github.io/W1ndysBotDocs/logo.png",
+            url: "https://github.com/W1ndys/W1ndysBot"
         }
     ]
 }; 

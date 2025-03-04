@@ -15,15 +15,15 @@ const config = {
     // 关于我
     about: {
         content: `
-            <p>你好！我是一名热爱创造的开发者。我专注于网络安全，喜欢设计美观且用户友好的界面。</p>
+            <p>你好！我是W1ndys，一名网络安全爱好者，同时也是一名Python爱好者。</p>
             <p>我的技能包括：</p>
             <ul>
                 <li>Python</li>
                 <li>网络安全</li>
-                <li>UI/UX 设计</li>
-                <li>响应式网页设计</li>
+                <li>网页设计</li>
+                <li>Python脚本</li>
             </ul>
-            <p>在业余时间，我喜欢摄影、阅读和探索新技术。</p>
+            <p>如果需要联系我，可以通过下方邮箱联系我。</p>
         `
     },
 
@@ -65,6 +65,12 @@ const config = {
     // 项目展示
     projects: [
         {
+            title: "QFNUCourseSelector",
+            description: "QFNU抢课脚本，支持多种选课模式的高性能选课工具",
+            image: "https://socialify.git.ci/W1ndys/QFNUCourseSelector/image?description=1&font=KoHo&forks=1&issues=1&language=1&owner=1&pulls=1&stargazers=1&theme=Auto",
+            url: "https://github.com/W1ndys/QFNUCourseSelector"
+        },
+        {
             title: "Easy-QFNU",
             description: "Easy-QFNU官方文档，致力于让你的QFNU生活更加便捷",
             image: "https://socialify.git.ci/W1ndys/Easy-QFNU/image?description=1&font=KoHo&forks=1&issues=1&language=1&owner=1&pulls=1&stargazers=1&theme=Auto",
@@ -73,8 +79,20 @@ const config = {
         {
             title: "W1ndysBot",
             description: "一个基于Python和NapCatQQ的QQ机器人",
-            image: "https://w1ndysbot.github.io/W1ndysBotDocs/logo.png",
+            image: "https://socialify.git.ci/W1ndys/W1ndysBot/image?description=1&font=KoHo&forks=1&issues=1&language=1&owner=1&pulls=1&stargazers=1&theme=Auto",
             url: "https://github.com/W1ndys/W1ndysBot"
+        },
+        {
+            title: "QFNULibraryBook",
+            description: "曲阜师范大学图书馆预约脚本，提供便捷的图书馆座位预约服务",
+            image: "https://socialify.git.ci/W1ndys/QFNULibraryBook/image?description=1&font=KoHo&forks=1&issues=1&language=1&owner=1&pulls=1&stargazers=1&theme=Auto",
+            url: "https://github.com/W1ndys/QFNULibraryBook"
+        },
+        {
+            title: "QFNULogin",
+            description: "曲阜师范大学教务系统模拟登录脚本，便于读取教务系统数据",
+            image: "https://socialify.git.ci/W1ndys/QFNULogin/image?description=1&font=KoHo&forks=1&issues=1&language=1&owner=1&pulls=1&stargazers=1&theme=Auto",
+            url: "https://github.com/W1ndys/QFNULogin"
         }
     ]
 }; 

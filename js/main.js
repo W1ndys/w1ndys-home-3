@@ -90,7 +90,6 @@ function loadProjects() {
 function setupThemeButtons() {
     const lightBtn = document.getElementById('theme-light');
     const darkBtn = document.getElementById('theme-dark');
-    const customBtn = document.getElementById('theme-custom');
     
     // 浅色主题按钮
     lightBtn.addEventListener('click', function() {
@@ -103,42 +102,20 @@ function setupThemeButtons() {
         setTheme('dark');
         updateActiveButton(darkBtn);
     });
-    
-    // 自定义主题按钮
-    customBtn.addEventListener('click', function() {
-        setTheme('custom');
-        updateActiveButton(customBtn);
-    });
 }
 
 // 设置主题
 function setTheme(theme) {
     // 移除所有主题类
-    document.body.classList.remove('dark-theme', 'custom-theme');
+    document.body.classList.remove('dark-theme');
     
     // 根据选择的主题添加相应的类
     if (theme === 'dark') {
         document.body.classList.add('dark-theme');
-    } else if (theme === 'custom') {
-        document.body.classList.add('custom-theme');
-        applyCustomTheme();
     }
     
     // 保存主题设置到本地存储
     localStorage.setItem('preferred-theme', theme);
-}
-
-// 应用自定义主题
-function applyCustomTheme() {
-    const customTheme = config.themes.custom;
-    
-    document.documentElement.style.setProperty('--bg', customTheme.bg);
-    document.documentElement.style.setProperty('--card-bg', customTheme.cardBg);
-    document.documentElement.style.setProperty('--text', customTheme.text);
-    document.documentElement.style.setProperty('--accent', customTheme.accent);
-    document.documentElement.style.setProperty('--secondary', customTheme.secondary);
-    document.documentElement.style.setProperty('--border', customTheme.border);
-    document.documentElement.style.setProperty('--hover', customTheme.hover);
 }
 
 // 更新活动按钮状态

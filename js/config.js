@@ -81,19 +81,5 @@ const config = {
             image: "images/project3.jpg",
             url: "#"
         }
-    ],
-
-    // 主题设置
-    themes: {
-        // 自定义主题颜色
-        custom: {
-            bg: "#f0f7ff",
-            cardBg: "#ffffff",
-            text: "#333333",
-            accent: "#ff6b6b",
-            secondary: "#6c757d",
-            border: "#e9ecef",
-            hover: "#f8f9fa"
-        }
-    }
+    ]
 }; 

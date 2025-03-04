@@ -243,11 +243,6 @@ body.dark-theme {
     --hover: var(--dark-hover);
 }
 
-/* 自定义主题类 */
-body.custom-theme {
-    /* 这些变量将通过JavaScript动态设置 */
-}
-
 /* 响应式设计 */
 @media (max-width: 768px) {
     .profile {

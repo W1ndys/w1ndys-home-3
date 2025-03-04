@@ -88,23 +88,82 @@ header {
 .card {
     background-color: var(--card-bg);
     border-radius: var(--border-radius);
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
     box-shadow: var(--card-shadow);
     transition: var(--transition);
     border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background-color: var(--accent);
+    opacity: 0.8;
 }
 
 .card h2 {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     color: var(--accent);
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     border-bottom: 2px solid var(--border);
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.8rem;
+    position: relative;
+    font-weight: 600;
+}
+
+.card h2::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background-color: var(--accent);
 }
 
 .content {
     line-height: 1.8;
+}
+
+/* 关于我部分的特殊样式 */
+#about-content {
+    padding: 0.3rem 0;
+}
+
+#about-content p {
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+#about-content ul {
+    margin-left: 0.5rem;
+    margin-bottom: 0.8rem;
+    list-style-type: none;
+}
+
+#about-content li {
+    margin-bottom: 0.3rem;
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+#about-content li::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: var(--accent);
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0.6rem;
 }
 
 /* 社交链接样式 */

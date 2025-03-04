@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人主页</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="profile">
+                <div class="profile-image">
+                    <img src="images/avatar.jpg" alt="个人头像" id="avatar">
+                </div>
+                <div class="profile-info">
+                    <h1 id="name">你的名字</h1>
+                    <p id="bio">个人简介 - 在config.js中自定义</p>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="card" id="about">
+                <h2>关于我</h2>
+                <div class="content" id="about-content">
+                    <!-- 内容将通过JavaScript从config.js加载 -->
+                </div>
+            </section>
+
+            <section class="card" id="links">
+                <h2>我的链接</h2>
+                <div class="social-links" id="social-links">
+                    <!-- 链接将通过JavaScript从config.js加载 -->
+                </div>
+            </section>
+
+            <section class="card" id="projects">
+                <h2>我的项目</h2>
+                <div class="projects-grid" id="projects-grid">
+                    <!-- 项目将通过JavaScript从config.js加载 -->
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p id="footer-text">© 2023 个人主页 - 使用config.js自定义</p>
+            <div class="theme-switch">
+                <span>主题：</span>
+                <button id="theme-light" class="theme-btn active">浅色</button>
+                <button id="theme-dark" class="theme-btn">深色</button>
+                <button id="theme-custom" class="theme-btn">自定义</button>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 

@@ -8,7 +8,7 @@ const config = {
     basicInfo: {
         name: "W1ndys",
         bio: "网络安全爱好者 / Python爱好者",
-        avatar: "https://avatars.githubusercontent.com/W1ndys", // Github头像地址
+        avatar: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/github-api/github-api.png", // 使用GitHub API图标作为头像
         footerText: "© 2025-present W1ndys 我的个人主页 - 由 HTML/CSS/JS 驱动"
     },
 
@@ -66,19 +66,19 @@ const config = {
         {
             title: "个人作品集",
             description: "展示我的设计和开发项目的作品集网站",
-            image: "images/project1.jpg",
+            image: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png",
             url: "#"
         },
         {
             title: "旅行博客",
             description: "记录我的旅行经历和摄影作品的博客",
-            image: "images/project2.jpg",
+            image: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png",
             url: "#"
         },
         {
             title: "天气应用",
             description: "使用React开发的实时天气查询应用",
-            image: "images/project3.jpg",
+            image: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png",
             url: "#"
         }
     ]

@@ -35,28 +35,19 @@ const config = {
             icon: "fab fa-github"
         },
         {
-            name: "LinkedIn",
-            url: "https://linkedin.com/in/yourprofile",
-            icon: "fab fa-linkedin"
-        },
-        {
-            name: "Twitter",
-            url: "https://twitter.com/yourusername",
-            icon: "fab fa-twitter"
-        },
-        {
-            name: "Instagram",
-            url: "https://instagram.com/yourusername",
-            icon: "fab fa-instagram"
-        },
-        {
             name: "Email",
-            url: "mailto:your.email@example.com",
+            url: "mailto:w1ndys@outlook.com",
+            icon: "fas fa-envelope"
+        },
+        //QQ邮箱
+        {
+            name: "QQ邮箱",
+            url: "mailto:w1ndys@qq.com",
             icon: "fas fa-envelope"
         },
         {
             name: "个人博客",
-            url: "https://yourblog.com",
+            url: "https://blog.w1ndys.top",
             icon: "fas fa-blog"
         }
     ],

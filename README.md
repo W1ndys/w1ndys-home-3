@@ -87,24 +87,6 @@ projects: [
 ];
 ```
 
-### 自定义主题
-
-在 `config.js` 文件中修改 `themes.custom` 对象来自定义颜色：
-
-```javascript
-themes: {
-    custom: {
-        bg: "#f0f7ff",
-        cardBg: "#ffffff",
-        text: "#333333",
-        accent: "#ff6b6b",
-        secondary: "#6c757d",
-        border: "#e9ecef",
-        hover: "#f8f9fa"
-    }
-}
-```
-
 ## 技术栈
 
 - HTML5

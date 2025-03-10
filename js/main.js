@@ -217,18 +217,25 @@ function setupHackerEffects() {
     const h1Element = document.getElementById('name');
     if (h1Element) {
         h1Element.addEventListener('mouseover', function() {
-            scrambleText(h1Element, h1Element.textContent);
+            // 只在黑客模式下触发文本扰乱效果
+            if (document.body.classList.contains('dark-theme')) {
+                scrambleText(h1Element, h1Element.textContent);
+            }
         });
         
         h1Element.addEventListener('mouseout', function() {
-            h1Element.textContent = config.basicInfo.name;
+            if (document.body.classList.contains('dark-theme')) {
+                h1Element.textContent = config.basicInfo.name;
+            }
         });
     }
     
-    // 添加点击音效
+    // 添加点击音效 - 只在黑客模式下启用
     document.querySelectorAll('a, button').forEach(element => {
         element.addEventListener('click', function() {
-            playHackerSound();
+            if (document.body.classList.contains('dark-theme')) {
+                playHackerSound();
+            }
         });
     });
 }

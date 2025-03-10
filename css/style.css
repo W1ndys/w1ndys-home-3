@@ -58,6 +58,10 @@ body {
 }
 
 body::before {
+    content: none;
+}
+
+body.dark-theme::before {
     content: "";
     position: fixed;
     top: 0;
@@ -74,23 +78,27 @@ body::before {
     max-width: 1000px;
     margin: 0 auto;
     padding: 2rem 1rem;
-    animation: terminalFlicker 0.3s infinite alternate;
 }
 
-@keyframes terminalFlicker {
-    0% { opacity: 0.98; }
-    100% { opacity: 1; }
+body.dark-theme .container {
+    animation: terminalFlicker 0.3s infinite alternate;
 }
 
 /* 头部样式 */
 header {
     margin-bottom: 2rem;
+}
+
+body.dark-theme header {
     border-bottom: 1px solid var(--accent);
     padding-bottom: 1rem;
-    position: relative;
 }
 
 header::before {
+    content: none;
+}
+
+body.dark-theme header::before {
     content: "/* PROFILE */";
     position: absolute;
     top: -20px;
@@ -314,25 +322,6 @@ body.dark-theme #terminal {
 body.dark-theme .matrix-background {
     opacity: 0.05;
     background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><text y="50" x="5" fill="%2300ff00" font-size="70">0</text><text y="50" x="40" fill="%2300ff00" font-size="70">1</text><text y="90" x="5" fill="%2300ff00" font-size="70">1</text><text y="90" x="40" fill="%2300ff00" font-size="70">0</text></svg>');
-}
-
-body.dark-theme .container {
-    animation: terminalFlicker 0.3s infinite alternate;
-}
-
-body.dark-theme header {
-    border-bottom: 1px solid var(--accent);
-    padding-bottom: 1rem;
-}
-
-body.dark-theme header::before {
-    content: "/* PROFILE */";
-    position: absolute;
-    top: -20px;
-    left: 0;
-    font-size: 0.8rem;
-    color: var(--secondary);
-    opacity: 0.7;
 }
 
 body.dark-theme .profile-image img {
@@ -677,10 +666,18 @@ body.dark-theme .profile-info h1:hover {
 
 /* 卡片特殊效果 */
 .card:hover {
+    box-shadow: var(--card-shadow);
+}
+
+body.dark-theme .card:hover {
     box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
 }
 
 .card:hover::before {
+    opacity: 0;
+}
+
+body.dark-theme .card:hover::before {
     opacity: 0.3;
 }
 
@@ -710,6 +707,10 @@ body.dark-theme .profile-info h1:hover {
 }
 
 .profile-info h1:hover {
+    animation: none;
+}
+
+body.dark-theme .profile-info h1:hover {
     animation: glitch 500ms infinite;
 }
 
@@ -778,4 +779,89 @@ body.dark-theme .stat {
 
 body.dark-theme .stat i {
     color: var(--accent);
+}
+
+/* 浅色模式下的关于我样式 */
+#about-content {
+    padding: 0.5rem 0;
+}
+
+#about-content p {
+    margin-bottom: 1.2rem;
+    line-height: 1.8;
+    color: var(--text);
+    font-size: 1.05rem;
+}
+
+#about-content p:first-child {
+    font-size: 1.1rem;
+    color: var(--accent);
+    font-weight: 500;
+}
+
+#about-content ul {
+    margin: 1.5rem 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+#about-content li {
+    position: relative;
+    padding-left: 1.8rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+}
+
+#about-content li::before {
+    content: "✦";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#about-content p:last-child {
+    padding: 1rem;
+    background-color: var(--bg);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border);
+    color: var(--secondary);
+    font-size: 0.95rem;
+}
+
+/* 黑客模式下的关于我样式覆盖 */
+body.dark-theme #about-content p::before {
+    content: "> ";
+    color: var(--secondary);
+    opacity: 0.8;
+}
+
+body.dark-theme #about-content li {
+    padding-left: 1.5rem;
+}
+
+body.dark-theme #about-content li::before {
+    content: "└─ ";
+    color: var(--secondary);
+    font-size: inherit;
+}
+
+body.dark-theme #about-content p:first-child {
+    color: var(--text);
+    font-weight: normal;
+}
+
+body.dark-theme #about-content p:last-child {
+    background-color: var(--dark-bg);
+    border-color: var(--border);
+    padding: 0;
+}
+
+body.dark-theme #about-content ul {
+    display: block;
 } 

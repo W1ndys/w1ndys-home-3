@@ -9,22 +9,23 @@ const config = {
         name: "W1ndys",
         bio: "网络安全爱好者 / Python爱好者",
         avatar: "https://github.com/W1ndys.png",
-        footerText: "© 2025-present W1ndys 个人黑客空间 - 由 HTML/CSS/JS 驱动"
+        footerText: "© 2025-present W1ndys - 由 HTML/CSS/JS 驱动"
     },
 
     // 关于我
     about: {
         content: `
-            <p>你好！我是W1ndys，一名网络安全爱好者，同时也是一名Python爱好者。</p>
-            <p>我的技能包括：</p>
+            <p>你好！我是W1ndys，一名充满热情的网络安全爱好者和Python开发者。我致力于探索网络安全的前沿技术，同时也热衷于用Python创造有趣的工具和解决方案。</p>
+            <p>我专注的技术领域：</p>
             <ul>
-                <li>Python编程</li>
+                <li>Python全栈开发</li>
                 <li>网络安全渗透测试</li>
                 <li>系统安全加固</li>
                 <li>恶意代码分析</li>
                 <li>网络流量分析</li>
+                <li>自动化脚本开发</li>
             </ul>
-            <p>如果需要联系我，可以通过下方邮箱联系我。请使用PGP加密您的邮件。</p>
+            <p>如果您对我的项目感兴趣或想要交流技术，欢迎通过下方的邮箱联系我。为了确保通信安全，建议使用PGP加密您的邮件。</p>
         `
     },
 

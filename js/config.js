@@ -9,7 +9,7 @@ const config = {
         name: "W1ndys",
         bio: "网络安全爱好者 / Python爱好者",
         avatar: "https://github.com/W1ndys.png",
-        footerText: "© 2025-present W1ndys 我的个人主页 - 由 HTML/CSS/JS 驱动"
+        footerText: "© 2025-present W1ndys 个人黑客空间 - 由 HTML/CSS/JS 驱动"
     },
 
     // 关于我
@@ -18,13 +18,21 @@ const config = {
             <p>你好！我是W1ndys，一名网络安全爱好者，同时也是一名Python爱好者。</p>
             <p>我的技能包括：</p>
             <ul>
-                <li>Python</li>
-                <li>网络安全</li>
-                <li>网页设计</li>
-                <li>Python脚本</li>
+                <li>Python编程</li>
+                <li>网络安全渗透测试</li>
+                <li>系统安全加固</li>
+                <li>恶意代码分析</li>
+                <li>网络流量分析</li>
             </ul>
-            <p>如果需要联系我，可以通过下方邮箱联系我。</p>
+            <p>如果需要联系我，可以通过下方邮箱联系我。请使用PGP加密您的邮件。</p>
         `
+    },
+
+    // 统计信息
+    stats: {
+        codeLines: "142,857+ 行代码",
+        coffeeCount: "1,024+ 杯咖啡",
+        codingHours: "3,600+ 小时编码"
     },
 
     // 社交链接

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的个人主页</title>
+    <title>个人主页</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,7 +11,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- 黑客效果背景元素 -->
+    <div class="matrix-background"></div>
+    
     <div class="container">
+        <!-- 终端标题 - 仅在黑客模式显示 -->
+        <div class="terminal-header" style="display: none;">
+            <span class="terminal-title">root@localhost:~# whoami</span>
+            <div class="terminal-buttons">
+                <span class="term-btn term-btn-close"></span>
+                <span class="term-btn term-btn-minimize"></span>
+                <span class="term-btn term-btn-maximize"></span>
+            </div>
+        </div>
+        
         <header>
             <div class="profile">
                 <div class="profile-image">
@@ -20,6 +33,11 @@
                 <div class="profile-info">
                     <h1 id="name">你的名字</h1>
                     <p id="bio">个人简介 - 在config.js中自定义</p>
+                    <div class="terminal-stats">
+                        <span class="stat"><i class="fas fa-code"></i> <span id="code-stat">10,000+ 行代码</span></span>
+                        <span class="stat"><i class="fas fa-coffee"></i> <span id="coffee-stat">999+ 杯咖啡</span></span>
+                        <span class="stat"><i class="fas fa-clock"></i> <span id="time-stat">1337+ 小时编码</span></span>
+                    </div>
                 </div>
             </div>
         </header>
@@ -45,6 +63,20 @@
                     <!-- 项目将通过JavaScript从config.js加载 -->
                 </div>
             </section>
+            
+            <!-- 终端部分 - 仅在黑客模式显示 -->
+            <section class="card" id="terminal">
+                <h2>terminal</h2>
+                <div class="terminal-container">
+                    <div class="terminal-line">$ whoami</div>
+                    <div class="terminal-line terminal-output" id="terminal-name"></div>
+                    <div class="terminal-line">$ pwd</div>
+                    <div class="terminal-line terminal-output">/home/user/projects</div>
+                    <div class="terminal-line">$ ls -la</div>
+                    <div class="terminal-line terminal-output">总用量 32<br>drwxr-xr-x 2 user user 4096 3月 4 10:30 .<br>drwxr-xr-x 6 user user 4096 3月 4 09:15 ..<br>-rw-r--r-- 1 user user 8192 3月 4 10:28 网络安全.txt<br>-rw-r--r-- 1 user user 4096 3月 3 15:45 Python.py<br>-rwxr-xr-x 1 user user 2048 3月 2 11:20 hack.sh</div>
+                    <div class="terminal-line">$ <span class="typing-text">正在加载命令...</span><span class="terminal-cursor"></span></div>
+                </div>
+            </section>
         </main>
 
         <footer>
@@ -52,12 +84,46 @@
             <div class="theme-switch">
                 <span>主题：</span>
                 <button id="theme-light" class="theme-btn active">浅色</button>
-                <button id="theme-dark" class="theme-btn">深色</button>
+                <button id="theme-dark" class="theme-btn">黑客模式</button>
             </div>
         </footer>
     </div>
 
     <script src="js/config.js"></script>
     <script src="js/main.js"></script>
+    
+    <!-- 黑客终端效果脚本 -->
+    <script>
+        // 打字效果
+        document.addEventListener('DOMContentLoaded', function() {
+            const typingText = document.querySelector('.typing-text');
+            const commands = ['正在扫描系统漏洞...', '正在分析网络流量...', '正在编写代码...', '正在破解密码...', 'sudo apt-get update', 'ping -c 4 google.com'];
+            let currentIndex = 0;
+            
+            function typeText() {
+                const command = commands[currentIndex];
+                let i = 0;
+                typingText.textContent = '';
+                
+                const typeInterval = setInterval(() => {
+                    if (i < command.length) {
+                        typingText.textContent += command.charAt(i);
+                        i++;
+                    } else {
+                        clearInterval(typeInterval);
+                        setTimeout(() => {
+                            currentIndex = (currentIndex + 1) % commands.length;
+                            typeText();
+                        }, 2000);
+                    }
+                }, 100);
+            }
+            
+            typeText();
+            
+            // 设置名称在终端输出
+            document.getElementById('terminal-name').textContent = document.getElementById('name').textContent;
+        });
+    </script>
 </body>
 </html> 

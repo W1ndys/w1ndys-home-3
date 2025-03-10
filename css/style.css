@@ -291,7 +291,7 @@ footer {
     display: none;
 }
 
-/* 黑客模式样式 */
+/* Hacker Mode样式 */
 body.dark-theme {
     --bg: var(--dark-bg);
     --card-bg: var(--dark-card-bg);
@@ -306,7 +306,7 @@ body.dark-theme {
     overflow-x: hidden;
 }
 
-/* 黑客模式下显示终端统计和终端容器 */
+/* Hacker Mode下显示终端统计和终端容器 */
 body.dark-theme .terminal-stats {
     display: flex;
     gap: 15px;
@@ -448,7 +448,7 @@ body.dark-theme .project-link:hover {
     box-shadow: 0 0 10px rgba(0, 255, 0, 0.4);
 }
 
-/* 黑客模式下的动画效果 */
+/* Hacker Mode下的动画效果 */
 @keyframes cursor {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
@@ -901,7 +901,7 @@ body.dark-theme .stat i {
     font-size: 0.95rem;
 }
 
-/* 黑客模式下的关于我样式覆盖 */
+/* Hacker Mode下的关于我样式覆盖 */
 body.dark-theme #about-content p::before {
     content: "> ";
     color: var(--secondary);

@@ -222,7 +222,7 @@ function setupHackerEffects() {
     const h1Element = document.getElementById('name');
     if (h1Element) {
         h1Element.addEventListener('mouseover', function () {
-            // 只在黑客模式下触发文本扰乱效果
+            // 只在Hacker Mode下触发文本扰乱效果
             if (document.body.classList.contains('dark-theme')) {
                 scrambleText(h1Element, h1Element.textContent);
             }
@@ -235,7 +235,7 @@ function setupHackerEffects() {
         });
     }
 
-    // 添加点击音效 - 只在黑客模式下启用
+    // 添加点击音效 - 只在Hacker Mode下启用
     document.querySelectorAll('a, button').forEach(element => {
         element.addEventListener('click', function () {
             if (document.body.classList.contains('dark-theme')) {

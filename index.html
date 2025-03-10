@@ -68,13 +68,11 @@
             <section class="card" id="terminal">
                 <h2>terminal</h2>
                 <div class="terminal-container">
-                    <div class="terminal-line">$ whoami</div>
-                    <div class="terminal-line terminal-output" id="terminal-name"></div>
-                    <div class="terminal-line">$ pwd</div>
-                    <div class="terminal-line terminal-output">/home/user/projects</div>
-                    <div class="terminal-line">$ ls -la</div>
-                    <div class="terminal-line terminal-output">总用量 32<br>drwxr-xr-x 2 user user 4096 3月 4 10:30 .<br>drwxr-xr-x 6 user user 4096 3月 4 09:15 ..<br>-rw-r--r-- 1 user user 8192 3月 4 10:28 网络安全.txt<br>-rw-r--r-- 1 user user 4096 3月 3 15:45 Python.py<br>-rwxr-xr-x 1 user user 2048 3月 2 11:20 hack.sh</div>
-                    <div class="terminal-line">$ <span class="typing-text">正在加载命令...</span><span class="terminal-cursor"></span></div>
+                    <div class="terminal-output" id="terminal-output"></div>
+                    <div class="terminal-input-line">
+                        <span class="terminal-prompt">root@w1ndys:~$</span>
+                        <input type="text" id="terminal-input" spellcheck="false" autocomplete="off">
+                    </div>
                 </div>
             </section>
         </main>
@@ -91,39 +89,5 @@
 
     <script src="js/config.js"></script>
     <script src="js/main.js"></script>
-    
-    <!-- 黑客终端效果脚本 -->
-    <script>
-        // 打字效果
-        document.addEventListener('DOMContentLoaded', function() {
-            const typingText = document.querySelector('.typing-text');
-            const commands = ['正在扫描系统漏洞...', '正在分析网络流量...', '正在编写代码...', '正在破解密码...', 'sudo apt-get update', 'ping -c 4 google.com'];
-            let currentIndex = 0;
-            
-            function typeText() {
-                const command = commands[currentIndex];
-                let i = 0;
-                typingText.textContent = '';
-                
-                const typeInterval = setInterval(() => {
-                    if (i < command.length) {
-                        typingText.textContent += command.charAt(i);
-                        i++;
-                    } else {
-                        clearInterval(typeInterval);
-                        setTimeout(() => {
-                            currentIndex = (currentIndex + 1) % commands.length;
-                            typeText();
-                        }, 2000);
-                    }
-                }, 100);
-            }
-            
-            typeText();
-            
-            // 设置名称在终端输出
-            document.getElementById('terminal-name').textContent = document.getElementById('name').textContent;
-        });
-    </script>
 </body>
 </html> 

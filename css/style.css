@@ -636,7 +636,9 @@ body.dark-theme .profile-info h1:hover {
     font-size: 0.9rem;
     line-height: 1.5;
     position: relative;
-    overflow: hidden;
+    overflow-y: auto;
+    height: 400px;
+    color: var(--text);
 }
 
 .terminal-container::before {
@@ -652,16 +654,81 @@ body.dark-theme .profile-info h1:hover {
 
 .terminal-line {
     margin-bottom: 5px;
+    color: var(--text);
 }
 
 .terminal-output {
-    color: var(--secondary);
     margin-bottom: 10px;
-    opacity: 0.9;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
 
-.typing-text {
+.terminal-input-line {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.terminal-prompt {
+    color: var(--accent);
+    margin-right: 8px;
+}
+
+#terminal-input {
+    background: transparent;
+    border: none;
     color: var(--text);
+    font-family: 'Hack', monospace;
+    font-size: 0.9rem;
+    flex: 1;
+    outline: none;
+}
+
+.terminal-output .error {
+    color: #ff5555;
+}
+
+.terminal-output .success {
+    color: #50fa7b;
+}
+
+.terminal-output .info {
+    color: #8be9fd;
+}
+
+.terminal-output .warning {
+    color: #ffb86c;
+}
+
+.terminal-output .command {
+    color: var(--accent);
+    margin-bottom: 5px;
+}
+
+.terminal-output .directory {
+    color: #bd93f9;
+}
+
+.terminal-output .file {
+    color: #f8f8f2;
+}
+
+/* 终端滚动条样式 */
+.terminal-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.terminal-container::-webkit-scrollbar-track {
+    background: var(--dark-bg);
+}
+
+.terminal-container::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 4px;
+}
+
+.terminal-container::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary);
 }
 
 /* 卡片特殊效果 */

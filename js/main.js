@@ -140,7 +140,7 @@ function setTheme(theme) {
     // 根据选择的主题添加相应的类
     if (theme === 'dark') {
         document.body.classList.add('dark-theme');
-        document.title = '黑客空间 | 个人主页';
+        document.title = 'W1ndys | 个人主页';
         document.querySelector('.terminal-header').style.display = 'flex';
         // 修改标题为黑客风格
         document.querySelector('#about h2').textContent = 'cat about.txt';

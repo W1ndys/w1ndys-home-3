@@ -15,7 +15,7 @@ const config = {
     // 关于我
     about: {
         content: `
-            <p>你好！我是W1ndys，网络安全爱好者 / Python爱好者，喜欢用AI写好玩的代码。</p>
+            <p>你好！我是W1ndys，网络安全爱好者 / Python爱好者。</p>
             <p>我专注的技术领域：</p>
             <ul>
                 <li>Python开发</li>

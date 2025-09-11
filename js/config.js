@@ -16,11 +16,11 @@ const config = {
     about: {
         content: `
             <p>你好！我是W1ndys，网络安全爱好者 / Python爱好者。</p>
-            <p>我专注的技术领域：</p>
+            <p>Hi</p>
             <ul>
-                <li>Python开发</li>
+                <li>Python自动化脚本</li>
                 <li>Web安全</li>
-                <li>前端开发</li>
+                <li>后端开发</li>
             </ul>
             <p>如果您对我的项目感兴趣或想要交流技术，欢迎通过下方的邮箱联系我。</p>
         `
@@ -58,7 +58,7 @@ const config = {
         },
         {
             name: "W1ndysBot",
-            url: "https://github.com/W1ndys/W1ndysBot",
+            url: "https://github.com/W1ndys/W1ndysBotFrame",
             icon: "fas fa-robot"
         },
         {
@@ -71,22 +71,16 @@ const config = {
     // 项目展示
     projects: [
         {
-            title: "QFNUCourseSelector",
-            description: "QFNU抢课脚本，支持多种选课模式的高性能选课工具",
-            image: "https://socialify.git.ci/W1ndys/QFNUCourseSelector/image?description=1&font=KoHo&forks=1&issues=1&language=1&owner=1&pulls=1&stargazers=1&theme=Auto",
-            url: "https://github.com/W1ndys/QFNUCourseSelector"
-        },
-        {
-            title: "Easy-QFNU",
+            title: "Easy-QFNU-Doc",
             description: "Easy-QFNU官方文档，致力于让你的QFNU生活更加便捷",
-            image: "https://socialify.git.ci/W1ndys/Easy-QFNU/image?description=1&font=KoHo&forks=1&issues=1&language=1&owner=1&pulls=1&stargazers=1&theme=Auto",
-            url: "https://github.com/W1ndys/Easy-QFNU"
+            image: "https://socialify.git.ci/W1ndys/Easy-QFNU-Doc/image?description=1&font=KoHo&forks=1&issues=1&language=1&owner=1&pulls=1&stargazers=1&theme=Auto",
+            url: "https://github.com/W1ndys/Easy-QFNU-Doc"
         },
         {
-            title: "W1ndysBot",
-            description: "一个基于Python和NapCatQQ的QQ机器人",
-            image: "https://socialify.git.ci/W1ndys/W1ndysBot/image?description=1&font=KoHo&forks=1&issues=1&language=1&owner=1&pulls=1&stargazers=1&theme=Auto",
-            url: "https://github.com/W1ndys/W1ndysBot"
+            title: "W1ndysBotFrame",
+            description: "基于NapCat 和 Python 实现的QQ机器人开发底层框架",
+            image: "https://socialify.git.ci/W1ndys/W1ndysBotFrame/image?description=1&font=KoHo&forks=1&issues=1&language=1&owner=1&pulls=1&stargazers=1&theme=Auto",
+            url: "https://github.com/W1ndys/W1ndysBotFrame"
         },
         {
             title: "QFNULibraryBook",

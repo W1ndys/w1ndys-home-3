@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>个人主页</title>
+    <title>W1ndys的个人主页</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <!-- 黑客效果背景元素 -->
     <div class="matrix-background"></div>
-    
+
     <div class="container">
         <!-- 终端标题 - 仅在Hacker Mode显示 -->
         <div class="terminal-header" style="display: none;">
@@ -24,7 +27,7 @@
                 <span class="term-btn term-btn-maximize"></span>
             </div>
         </div>
-        
+
         <header>
             <div class="profile">
                 <div class="profile-image">
@@ -63,7 +66,7 @@
                     <!-- 项目将通过JavaScript从config.js加载 -->
                 </div>
             </section>
-            
+
             <!-- 终端部分 - 仅在Hacker Mode显示 -->
             <section class="card" id="terminal">
                 <h2>terminal</h2>
@@ -79,6 +82,7 @@
 
         <footer>
             <p id="footer-text">© 2023 个人主页 - 使用config.js自定义</p>
+            <p id="beian-info"></p>
             <div class="theme-switch">
                 <span>主题：</span>
                 <button id="theme-light" class="theme-btn active">浅色</button>
@@ -90,4 +94,5 @@
     <script src="js/config.js"></script>
     <script src="js/main.js"></script>
 </body>
-</html> 
+
+</html>

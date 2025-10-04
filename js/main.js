@@ -63,6 +63,11 @@ function loadBasicInfo() {
     if (document.getElementById('time-stat')) {
         document.getElementById('time-stat').textContent = config.stats?.codingHours || "1337+ 小时编码";
     }
+
+    // 设置备案信息
+    if (document.getElementById('beian-info') && config.basicInfo.beian) {
+        document.getElementById('beian-info').innerHTML = `备案号: <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">${config.basicInfo.beian}</a>`;
+    }
 }
 
 // 加载关于我的内容
@@ -156,7 +161,7 @@ function setTheme(theme) {
         document.documentElement.style.setProperty('--border', 'var(--dark-border)');
         document.documentElement.style.setProperty('--hover', 'var(--dark-hover)');
     } else {
-        document.title = '个人主页';
+        document.title = 'W1ndys | 个人主页';
         document.querySelector('.terminal-header').style.display = 'none';
         // 恢复普通标题
         document.querySelector('#about h2').textContent = '关于我';
@@ -235,14 +240,7 @@ function setupHackerEffects() {
         });
     }
 
-    // 添加点击音效 - 只在Hacker Mode下启用
-    document.querySelectorAll('a, button').forEach(element => {
-        element.addEventListener('click', function () {
-            if (document.body.classList.contains('dark-theme')) {
-                playHackerSound();
-            }
-        });
-    });
+
 }
 
 // 文本扰乱效果
@@ -272,17 +270,6 @@ function scrambleText(element, originalText) {
     }, 30);
 }
 
-// 黑客音效
-function playHackerSound() {
-    const sounds = [
-        "data:audio/mp3;base64,//uQxAAAAAAAAAAAAAAAAAAAAAAAWGluZwAAAA8AAAAFAAAGUACFhYWFhYWFhYWFhYWFhYWFhYWFvb29vb29vb29vb29vb29vb29vb3p6enp6enp6enp6enp6enp6enp6f////////////////////////////////8AAAA5TEFNRTMuOTlyAm4AAAAALgkAABSAJAJATQABzAAAAoZtuaRpAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//sQxAADwAABpAAAACAAADSAAAAETEFNRTMuOTkuNVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVU=",
-        "data:audio/mp3;base64,//uQxAAAAAAAAAAAAAAAAAAAAAAAWGluZwAAAA8AAAAFAAAGUACFhYWFhYWFhYWFhYWFhYWFhYWFvb29vb29vb29vb29vb29vb29vb3p6enp6enp6enp6enp6enp6enp6f////////////////////////////////8AAAA5TEFNRTMuOTlyAm4AAAAALgkAABSAJAJATQABzAAAAoZtuaRsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//sQxAADwAABpAAAACAAADSAAAAETEFNRTMuOTkuNVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVU="
-    ];
-
-    const audio = new Audio(sounds[Math.floor(Math.random() * sounds.length)]);
-    audio.volume = 0.2;
-    audio.play();
-}
 
 // 终端功能
 class Terminal {

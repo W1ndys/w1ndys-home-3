@@ -9,7 +9,8 @@ const config = {
         name: "W1ndys",
         bio: "网络安全爱好者 / Python爱好者",
         avatar: "https://github.com/W1ndys.png",
-        footerText: "© 2025-present W1ndys - 由 HTML/CSS/JS 驱动"
+        footerText: "© 2025-present W1ndys - 由 HTML/CSS/JS 驱动",
+        beian: "鲁ICP备2024104796号-1"  // 如果没有备案号，请留空字符串 ""
     },
 
     // 关于我

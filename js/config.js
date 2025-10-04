@@ -17,7 +17,6 @@ const config = {
     about: {
         content: `
             <p>你好！我是W1ndys，网络安全爱好者 / Python爱好者 / Go语言爱好者。</p>
-            <p>Hi</p>
             <ul>
                 <li>Python自动化脚本</li>
                 <li>Web安全</li>
@@ -64,7 +63,7 @@ const config = {
         },
         {
             name: "Easy-QFNU",
-            url: "https://github.com/W1ndys/Easy-QFNU",
+            url: "https://easy-qfnu.top",
             icon: "fas fa-book"
         }
     ],
